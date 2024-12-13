@@ -1,0 +1,11 @@
+HR
+employee count=COUNT((HR(HR[Employee number])))
+attrition count=COUNTROWS(["HR",HR[Attrition]="yes"))
+attrition rate=DIVIDE([attrition count],[employee count],0)*100
+active employee=[Employee count]-[active count]
+average age =AVERAGE(HR[Age])
+
+
+Revenue
+average revenue=AVERAGE(VALUES(salestable[state]),CALCULATE((DUM((SalesTable[Revenue]))))
+profitable=IF([averagerev]>1500,"profitable","non profitable")
