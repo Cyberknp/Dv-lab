@@ -7,5 +7,5 @@ average age =AVERAGE(HR[Age])
 
 
 Revenue
-average revenue=AVERAGEX(VALUES(salestable[state]),CALCULATE((DUM((SalesTable[Revenue]))))
+average revenue=AVERAGEX(VALUES(salestable[state]),CALCULATE((SUM((SalesTable[Revenue]))))
 profitable=IF([averagerev]>1500,"profitable","non profitable")
